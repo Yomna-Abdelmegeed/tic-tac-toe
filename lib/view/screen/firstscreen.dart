@@ -9,35 +9,67 @@ class Firstscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('images/background.png'), fit: BoxFit.cover),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment(0.8, 1),
+          colors: <Color>[
+            Color.fromRGBO(0, 210, 255, 1),
+            Color.fromRGBO(58, 123, 213, 1),
+          ],
+          tileMode: TileMode.mirror,
+        ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
-              'Pick who goes first?',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-                fontSize: 24,
+            Expanded(
+              flex: 5,
+              child: Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('images/xo.png'), fit: BoxFit.cover),
+                ),
+                child: Text(
+                  'Tix-Tac-Toe',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 40,
+                  ),
+                ),
               ),
             ),
-            SizedBox(height: 32),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                XoWidget(
-                  player: 'x',
-                ),
-                XoWidget(
-                  player: 'o',
-                ),
-              ],
+            Expanded(
+              flex: 3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Pick who goes first?',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 24,
+                    ),
+                  ),
+                  SizedBox(height: 32),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      XoWidget(
+                        player: 'x',
+                      ),
+                      XoWidget(
+                        player: 'o',
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 48)
+                ],
+              ),
             ),
-            SizedBox(height: 40)
           ],
         ),
       ),
