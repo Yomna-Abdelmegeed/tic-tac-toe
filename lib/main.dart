@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tix_tac_toe/screen/firstscreen.dart';
-import 'package:tix_tac_toe/screen/gamescreen.dart';
+import 'package:tix_tac_toe/view/screen/firstscreen.dart';
+import 'package:tix_tac_toe/view/screen/gamescreen.dart';
 
 void main() {
   runApp(const XO());

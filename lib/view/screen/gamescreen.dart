@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tix_tac_toe/widget/board.dart';
+import 'package:tix_tac_toe/view/widget/board.dart';
 
 class Gamescreen extends StatefulWidget {
   static const routeNamed = 'game';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tix_tac_toe/screen/gamescreen.dart';
+import 'package:tix_tac_toe/view/screen/gamescreen.dart';
 
 class XoWidget extends StatelessWidget {
   XoWidget({super.key, required this.player});
