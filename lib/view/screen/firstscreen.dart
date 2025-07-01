@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tix_tac_toe/view/widget/xo_widget.dart';
 
 class Firstscreen extends StatelessWidget {
-  static const routeNamed = 'frist';
   const Firstscreen({super.key});
 
   @override

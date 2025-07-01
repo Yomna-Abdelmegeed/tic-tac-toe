@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Board extends StatelessWidget {
-  Board(
+  const Board(
       {super.key,
       required this.contain,
       required this.onClick,
       required this.col,
       required this.row});
-  String contain;
-  Function onClick;
-  int col;
-  int row;
+  final String contain;
+  final Function onClick;
+  final int col;
+  final int row;
 
   @override
   Widget build(BuildContext context) {

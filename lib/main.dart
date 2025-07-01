@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tix_tac_toe/view/screen/firstscreen.dart';
-import 'package:tix_tac_toe/view/screen/gamescreen.dart';
 
 void main() {
   runApp(const XO());
@@ -11,13 +11,9 @@ class XO extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Firstscreen.routeNamed,
-      routes: {
-        Firstscreen.routeNamed: (context) => Firstscreen(),
-        Gamescreen.routeNamed: (context) => Gamescreen(),
-      },
+      home: Firstscreen() ,
     );
   }
 }

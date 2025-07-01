@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tix_tac_toe/view/screen/gamescreen.dart';
 
 class XoWidget extends StatelessWidget {
-  XoWidget({super.key, required this.player});
+ const XoWidget({super.key, required this.player});
   final String player;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, Gamescreen.routeNamed, arguments: player);
+        Get.to(Gamescreen(), arguments: player);
       },
       child: Container(
         padding: EdgeInsets.all(20),
